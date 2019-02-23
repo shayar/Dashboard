@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ChartsModule} from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -9,6 +10,9 @@ import { SectionSalesComponent } from './sections/section-sales/section-sales.co
 import { SectionHealthsComponent } from './sections/section-healths/section-healths.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from 'src/routes';
+import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
+import { LineChartComponent } from './charts/line-chart/line-chart.component';
+import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
 
 @NgModule({
    declarations: [
@@ -17,11 +21,15 @@ import { appRoutes } from 'src/routes';
       SidebarComponent,
       SectionOrdersComponent,
       SectionSalesComponent,
-      SectionHealthsComponent
+      SectionHealthsComponent,
+      PieChartComponent,
+      LineChartComponent,
+      BarChartComponent
    ],
    imports: [
       BrowserModule,
-      RouterModule.forRoot(appRoutes)
+      RouterModule.forRoot(appRoutes),
+      ChartsModule
    ],
    providers: [],
    bootstrap: [
